@@ -1,10 +1,16 @@
 import './ExpenseItem.css'
-import Card from './Card'
 import ExpenseDate from './ExpenseDate'
+import Card from './Card'
 
 
 function ExpenseItem(props) {
-    
+    let title = props.title;
+
+    const changeTitle = () => {
+        title = 'Change Title';
+        console.log('hi');
+    }
+
     return (
         <Card className='expense-item'>
             <ExpenseDate date={props.date}/>
@@ -12,8 +18,11 @@ function ExpenseItem(props) {
                 <h2>{props.title}</h2>
                 <div className='expense-item__price'>{props.amount}</div>
             </div>
+            <button onClick={changeTitle}>Change Title</button>
         </Card>
     )
 }
+
+
 
 export default ExpenseItem;
