@@ -8,7 +8,7 @@ function App() {
   ]
 
   return (
-    <Expenses items={expenses}/>
+    <Expenses item={expenses}/>
   );
 }
 
